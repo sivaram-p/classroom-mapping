@@ -4,9 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>ClassMap - Mapping System</title>
-
+<link rel="stylesheet" href="mapper.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="mapper.js" defer></script>
 </head>
+<body>
+<div class="navbar">
+    <button onclick="undo()">Undo</button>
+    <button onclick="redo()">Redo</button>
+    <button onclick="groupSelected()">Group</button>
+    <button onclick="ungroupSelected()">Ungroup</button>
+    <button onclick="duplicateSelected()">Duplicate</button>
+    <button onclick="deleteSelected()" class="redbutton">Delete</button>
+    <button onclick="rotateLeft()">⟲</button><!-- rotate-->
+    <button onclick="rotateRight()">⟳</button>
+    <button onclick="clearCanvas()">Clear</button>
+    <button onclick="downloadPNG()">PNG</button>
+    <button onclick="downloadPDF()">PDF</button>
+    <button onclick="zoomIn()">Zoom +</button>
+    <button onclick="zoomOut()">Zoom -</button>
+    <button onclick="resetZoom()">Reset Zoom</button>
+    <span id="zoomDisplay">100%</span>
+</div>
 </html>
