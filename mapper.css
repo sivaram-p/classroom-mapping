@@ -33,15 +33,15 @@
         color: white;
         border: 1px solid #666666;
         padding: 8px 12px;
-        border-radius: 5px;
+        border-radius: 15px;
         font-size: 13px;
         cursor: pointer;
         white-space: nowrap;
     }
 
-    button:hover { background: #254a60; }
-    .redbutton { background: #c62828; }
-    .redbutton:hover { background: #ff1111; }
+    button:hover { background: #102b3b;border: 1px solid #ffffff }
+    .redbutton { background: #af2323; }
+    .redbutton:hover { background: #ff1111;}
     .main {
         flex: 1;
         padding: 56px 4px 68px;  

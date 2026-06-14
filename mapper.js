@@ -44,6 +44,20 @@ function applyZoom(centerPoint = null) {
     canvas.renderAll();
 }
 
+/*function fitToScreen() {
+    const wrapper = document.getElementById('wrapper');
+    if (!wrapper) return;
+
+    const w = wrapper.clientWidth;
+    const h = wrapper.clientHeight;
+
+    fitScale = Math.min(w / baseWidth, h / baseHeight);
+    fitScale = Math.max(fitScale, 0.35);
+    applyZoom();
+    updateZoomDisplay();
+}*/
+let isFirstLoad = true; 
+
 function fitToScreen() {
     const wrapper = document.getElementById('wrapper');
     if (!wrapper) return;
@@ -53,6 +67,13 @@ function fitToScreen() {
 
     fitScale = Math.min(w / baseWidth, h / baseHeight);
     fitScale = Math.max(fitScale, 0.35);
+
+    if (isFirstLoad) {
+        const isMobile = window.innerWidth <= 768; 
+        currentZoom = isMobile ? 0.8 : 1.0; 
+        isFirstLoad = false; 
+    }
+
     applyZoom();
     updateZoomDisplay();
 }
